@@ -1,0 +1,33 @@
+options:
+  san_ip:
+    type: string
+    description: 'The hostname (or IP address) for the SolidFire Cluster API endpoint.'
+    default: 'YourIPaddressGoesHere'
+  san_login:
+    type: string
+    description: 'Cluster account used by Cinder service.'
+    default: 'YourClusterAdminHere'
+  san_password:
+    type: string
+    description: 'Password for Cluster Admin account (san_password)'
+    default: 'TheSecretGoesHere'
+  sf_api_port:
+    type: string
+    description: 'The TCP port to use for API communication with the cluster or proxy server.'
+    default: '443'
+  sf_allow_template_caching:
+    type: string
+    description: 'When creating bootable volumes, create an image cache on the SolidFire cluster.'
+    default: 'true'
+  sf_template_account_name:
+    type: string
+    description: 'SolidFire account to use to hold the template cache.'
+    default: 'openstack-vtemplate'
+  sf_account_prefix:
+    type: string
+    description: 'Prefix to use for all SolidFire accounts related to this OpenStack.'
+    default: ''
+  sf_volume_prefix:
+    type: string
+    description: 'Prefix to use for all SolidFire volumes related to this OpenStaack Cloud.'
+    default: 'UUID-'

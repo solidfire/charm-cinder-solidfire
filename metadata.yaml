@@ -1,0 +1,22 @@
+name: cinder-solidfire
+summary: Configure OpenStack Cinder to use Solidfire.
+maintainer: Ed Balduf <balduf@netapp.com>
+description: |
+  This charm will add a 'solidfire' section to the cinder.conf
+  file and place the approriate configuration information in that
+  section and enable it.
+tags:
+  - openstack
+  - storage
+series:
+  - xenial
+  - trusty
+subordinate: true
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
