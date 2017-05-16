@@ -11,7 +11,7 @@ To use:
 
     juju deploy cinder
     juju deploy cinder-solidfire
-    juju set-config cinder-solidfire san_ip=172.27.1.50 san_login=admin san_password=solidfire
+    juju config cinder-solidfire san_ip=172.27.1.50 san_login=admin san_password=solidfire
     juju add-relation cinder-solidfire:storage-backend cinder:storage-backend
 
 This will setup a configuration file with the stanza named for the unit
